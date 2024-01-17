@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, sans-serif;
+}
+
+header {
+    background-color: #5f27cd;
+    padding: 16px 0;
+    color: #fff;
+    display: flex; /* para deixar o botão do lado do titilo foi usado display:flex;*/
+    border-bottom: 16px solid #341f97;
+    justify-content: center;
+    text-transform: uppercase; /*text-transform: uppercase; para deixar a letras com efeito de caps lock*/
+    font-style: italic;
+}
+
+header button {
+    margin-left: 16px;/* margin-left: 16px; foi aplicado uma margin para o botão não ficar grudade com o titulo*/
+
+}   
+
+form {
+    background-color: #c8d6e5;
+    padding: 24px 0;
+    text-align: center;
+    display: none;/*display: none; para o formulario não ser exibido*/
+}
+form h2 {
+    margin-bottom: 16px;
+}
+
+input, button { 
+    padding: 8px;
+}
+
+button {
+    background-color: #009432;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+#botao-cancelar{
+    background-color: red;
+}
+
+ul {
+    display: flex; /* display: flex; para as imagens fique uma do lado da outra*/
+    flex-wrap: wrap; /*flex-wrap: wrap; para quando chegar o limite de tela criar uma nova linha*/
+
+}
+
+ul li {
+    max-width: 25%; /*max-width: 25%; para definir a largura maxima dos itens*/
+    list-style: none;/* para remover a bolinha que aparece na lista*/
+    position: relative; /*para não vazar no layout */
+    max-height: 280px;/*limitar a altura do li*/
+    overflow-y: hidden;/*para não utrapasar o limite de 280px não será exibido*/
+}
+ul li img {
+    width: 100%;/*width: 100%; para a imag ocupar 100% da area*/
+}
+
+.overlay-imagem-link {
+    padding: 16px;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;/*posicionar o elemento no canto inferior do li*/
+    bottom: 0;/*dizer que estara na extremidade*/
+    left: 0;
+    width: 100%;/*definir a largura*/
+    opacity: 0;/* opacidade da barrinha preta*/
+    transition: all ease .5s;
+}
+.overlay-imagem-link a{
+    color: #fff;
+    text-decoration: none;/*para remover o uderline*/
+
+}
+
+ul li:hover .overlay-imagem-link{
+    opacity: 1;
+}
